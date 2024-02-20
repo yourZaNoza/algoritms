@@ -16,15 +16,8 @@ def find_min_max(A):
 
 N = 3
 M = 3
-A = [[0]*M for z in range(N)]
-
-for i in range(N):
-    for j in range(M):
-        A[i][j] = random.randint(-10, 10)
-for x in range(len(A)):
-    for y in range(len(A[x])):
-        print(A[x][y], end=' ')
-    print()
+A = [[random.randint(-10, 10) for x in range(M)] for z in range(N)]
+print(A)
 
 
 find_min_max(A)
