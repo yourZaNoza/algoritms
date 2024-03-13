@@ -1,20 +1,15 @@
+# -*- coding: utf-8 -*-
 # Вариант 20.
 # Из текстового файла (writer.txt) выбрать фамилии писателей, посчитать количество фамилий.
 # Создать новый файл, в котором выполнить замену слова "роман" на слово "произведение".
 
 import re
+c = 0
+for i in open('writer.txt', encoding='utf-8'):
+    # print(i, end='')
+    matches = re.findall(r'\S+(?=\s\w\.\w)', i)
+    c += 1
+    print(matches)
+print(f'Количество фамилий в файле: {c}')
 
-file1 = open('writer.txt', 'r')
-file1.readlines()
-# f1 = re.findall(r'\bписатель\b', file1)
-file1.close
-
-print()
-
-text = "My function(x, y) takes two arguments. I call it like this: my_function(a, b)."
-
-# Use the 're.findall' function to find all matches in the text
-matches = re.findall(r'\b\w+\b\s+(?=\()', text, re.IGNORECASE)
-
-# Print the list of matches
-print(matches)
+new = open(new_writer.txt, 'w')
