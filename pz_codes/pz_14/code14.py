@@ -9,7 +9,7 @@ for i in open('writer.txt', encoding='utf-8'):
     # print(i, end='')
     matches = re.findall(r'\S+(?=\s\w\.\w)', i)
     c += 1
-    # print(matches)
+    print(matches)
 print(f'Количество фамилий в файле: {c}')
 
 endings = {
